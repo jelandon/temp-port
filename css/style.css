@@ -1,5 +1,11 @@
+@import url(//db.onlinewebfonts.com/c/bf35ddaa105b41dd66cb2eb93424c588?family=American+Typewriter);
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+@font-face {font-family: "American Typewriter"; src: url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.eot"); src: url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.woff") format("woff"), url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bf35ddaa105b41dd66cb2eb93424c588.svg#American Typewriter") format("svg"); }
+
 * {
-	font-family: 'raleway';
+	font-family: 'Jost', sans-serif;
 	-webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
       -ms-box-sizing: border-box;
@@ -8,7 +14,7 @@
 
 html{
 	/* overflow-x: hidden; */
-	font-size: 20px;
+	/* font-size: 14px; */
 }
 
 body {
@@ -18,7 +24,7 @@ body {
 header {
 	display: flex;
 	align-items: center;
-	background-color: #0099cc;
+	/* background-color: #0099cc; */
 	height: 100px;
 	justify-content: space-between;
 	width: 100%;
@@ -61,7 +67,7 @@ header li {
 }
 
 header li a {
-	color: white;
+	color: #0099cc;
 	font-weight: 600;
 	font-size: 1rem;
 	text-decoration: none;
@@ -70,7 +76,7 @@ header li a {
 }
 
 .svg {
-	fill: white;
+	fill: #0099cc;
 }
 
 .axiom .svg{
@@ -101,16 +107,53 @@ main{
 	min-height: calc(100vh - 100px);
 	max-width: 1000px;
 	margin: 0 auto;
+	position: relative;
+}
+
+.splash {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 24px;
+	font-weight: 100;
+	position: absolute;
+	margin: 0 auto;
+	top: calc(50% - 100px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+.left-splash {
+	text-align: right;
+	padding-right: 10px;
 }
 
 
+.right-splash {
+	text-align: left;
+}
+
+.strikethrough {
+	color: #BFBFBF;
+	text-decoration: line-through;
+	text-decoration-color: rgba(0, 0, 0, 0.25);
+}
+
+.answer {
+	font-weight: 900;
+	color: #0099cc;
+}
+
+/*
 h1 {
-	font-size: 3.5em;
+
 	text-align:left;
 	-webkit-margin-after: 0;
 	-webkit-margin-before: 0;
 	padding: 2rem 0 1.5rem 0;
-}
+} */
 h2 {
 	font-size:1.5em;
 	-webkit-margin-after: 0;

@@ -1,0 +1,30 @@
+$ ->
+  result = []
+  count  = 0
+
+  # Loop through each reel
+  $('.reel-outer'). each ->
+    $this    = $(this)
+    index    = $this.index()
+    spinPlus = 0
+
+    # When the spin link is clicked...
+    $('.spin').click ->
+
+      # Choose a random symbol between 1 and 10         
+      type     = parseInt((Math.random() * 5)) + 4
+
+      # Define a spin duration between 1 and 10000
+      duration = parseInt((Math.random() * 3000)) + 2000
+
+      # Increment the total spin value
+      spinPlus += 3600
+
+      # Multiply type by 36 (degrees) and add to the total
+      spin     = type * 36 + spinPlus
+
+      # Apply the transition duration and rotation
+      $this.find('.reel').css
+        WebkitTransitionDuration: "#{ duration }ms"
+        WebkitTransform: "rotateX(-#{ spin }deg)"
+
